@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lubrax Asa Norte | Troca de Óleo Especializada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#008542', /* Verde Lubrax */
+                            yellow: '#FFD100', /* Amarelo detalhe */
+                            dark: '#0B0F19', /* Fundo ultra escuro */
+                            card: '#161C2A' /* Cinza dos cards */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;750;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F19;
+        }
+        .hero-bg {
+            background: linear-gradient(180deg, rgba(11, 15, 25, 0.7) 0%, rgba(11, 15, 25, 0.98) 100%), 
+                        url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body class="text-gray-100 antialiased scroll-smooth">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-green rounded-lg flex items-center justify-center font-black text-xl text-brand-yellow">L</div>
+                <div>
+                    <span class="font-extrabold text-lg sm:text-xl tracking-wider block leading-none text-white">LUBRAX</span>
+                    <span class="text-[10px] sm:text-xs text-brand-green font-bold tracking-widest uppercase">Asa Norte</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold tracking-wide">
+                <a href="#inicio" class="hover:text-brand-green transition-colors text-gray-300">Início</a>
+                <a href="#servicos" class="hover:text-brand-green transition-colors text-gray-300">Serviços</a>
+                <a href="#sobre" class="hover:text-brand-green transition-colors text-gray-300">Sobre Nós</a>
+                <a href="#localizacao" class="hover:text-brand-green transition-colors text-gray-300">Onde Estamos</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="https://wa.me/5561996231771?text=Olá!+Gostaria+de+agendar+uma+troca+de+óleo." target="_blank" 
+                   class="bg-brand-green hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 transition-all transform hover:scale-105 shadow-lg shadow-brand-green/20">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i> Agendar Agora
+                </a>
+            </div>
+
+            <button onclick="toggleMenu()" class="md:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-white/5 transition-colors" aria-label="Menu Principal">
+                <i data-lucide="menu" id="menu-icon" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-gray-800 px-6 py-6 space-y-4 animate-fade-in">
+            <a href="#inicio" onclick="toggleMenu()" class="block text-lg font-medium text-gray-300 hover:text-brand-green py-2 border-b border-gray-800/50">Início</a>
+            <a href="#servicos" onclick="toggleMenu()" class="block text-lg font-medium text-gray-300 hover:text-brand-green py-2 border-b border-gray-800/50">Serviços</a>
+            <a href="#sobre" onclick="toggleMenu()" class="block text-lg font-medium text-gray-300 hover:text-brand-green py-2 border-b border-gray-800/50">Sobre Nós</a>
+            <a href="#localizacao" onclick="toggleMenu()" class="block text-lg font-medium text-gray-300 hover:text-brand-green py-2">Onde Estamos</a>
+            <a href="https://wa.me/5561996231771" target="_blank" class="w-full text-center block bg-brand-green text-white py-3.5 rounded-xl font-bold shadow-lg shadow-brand-green/20">
+                Chamar no WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center pt-24 pb-12 px-4 sm:px-6">
+        <div class="max-w-4xl text-center">
+            <span class="inline-block bg-brand-green/10 text-brand-green border border-brand-green/30 px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-6">
+                📍 406 ASA NORTE BRASÍLIA-DF
+            </span>
+            <h1 class="text-3xl sm:text-5xl md:text-7xl font-black tracking-tight text-white mb-6 uppercase leading-tight">
+                A PERFORMANCE QUE O SEU <br class="hidden sm:inline"><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-brand-yellow">MOTOR MERECE</span>
+            </h1>
+            <p class="text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed px-2">
+                Troca de óleo especializada Lubrax, filtros e fluidos com atendimento de alta performance. Traga sua máquina para quem entende do assunto.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-sm mx-auto sm:max-w-none">
+                <a href="https://wa.me/5561996231771" target="_blank" class="w-full sm:w-auto bg-brand-green hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-base flex items-center justify-center gap-3 transition-all transform hover:scale-105 shadow-xl shadow-brand-green/30">
+                    <i data-lucide="message-square" class="w-5 h-5"></i> Falar com Especialista
+                </a>
+                <a href="#localizacao" class="w-full sm:w-auto border border-gray-700 hover:border-gray-500 hover:bg-white/5 text-white px-8 py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 transition-all">
+                    Ver Localização <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tight text-white mb-4">
+                Nossos Serviços Automotivos
+            </h2>
+            <div class="h-1 w-20 bg-brand-green mx-auto rounded-full"></div>
+            <p class="text-gray-400 mt-4 text-sm sm:text-base max-w-md mx-auto">Cuidado profissional e lubrificantes de ponta para garantir a vida útil do seu carro.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div class="bg-brand-card p-6 sm:p-8 rounded-2xl border border-gray-800 hover:border-brand-green/40 transition-all group">
+                <div class="w-12 h-12 bg-brand-green/10 text-brand-green rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-white transition-all">
+                    <i data-lucide="droplet" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Troca de Óleo Completa</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Trabalhamos com toda a linha Lubrax (sintéticos, semissintéticos e minerais) para todos os tipos de motores nacionais e importados.
+                </p>
+            </div>
+
+            <div class="bg-brand-card p-6 sm:p-8 rounded-2xl border border-gray-800 hover:border-brand-green/40 transition-all group">
+                <div class="w-12 h-12 bg-brand-green/10 text-brand-green rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-white transition-all">
+                    <i data-lucide="filter" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Substituição de Filtros</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Substituição imediata de filtros de óleo, ar do motor, combustível e cabine (ar-condicionado) para manter o sistema protegido.
+                </p>
+            </div>
+
+            <div class="bg-brand-card p-6 sm:p-8 rounded-2xl border border-gray-800 hover:border-brand-green/40 transition-all group sm:col-span-2 lg:col-span-1">
+                <div class="w-12 h-12 bg-brand-green/10 text-brand-green rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-white transition-all">
+                    <i data-lucide="wrench" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold mb-3 text-white">Revisão de Fluidos</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Análise e reposição de fluido de freio, líquido de arrefecimento (radiador) e direção hidráulica com equipamentos específicos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-brand-card/50 border-y border-gray-800 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="order-1">
+                <span class="text-xs font-bold tracking-widest text-brand-green uppercase">DIFERENCIAL LUBRAX</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-5xl font-black uppercase text-white mt-2 mb-6 leading-tight">
+                    RAPIDEZ, QUALIDADE E TRANSPARÊNCIA
+                </h2>
+                <p class="text-gray-400 mb-6 text-sm sm:text-base leading-relaxed">
+                    Localizada estrategicamente na **Asa Norte**, nossa unidade conta com equipe qualificada e certificada para cuidar do seu carro. Entendemos que seu tempo é precioso, por isso nosso sistema de troca de óleo é ágil e direto, sem enrolação.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-6 h-6 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center mt-1 shrink-0">
+                            <i data-lucide="check" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-gray-300 font-medium text-sm sm:text-base">Lubrificantes originais Lubrax homologados pelas montadoras.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-6 h-6 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center mt-1 shrink-0">
+                            <i data-lucide="check" class="w-4 h-4"></i>
+                        </div>
+                        <p class="text-gray-300 font-medium text-sm sm:text-base">Check-up gratuito de 10 itens de segurança do motor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-2 relative h-[250px] sm:h-[350px] lg:h-[450px] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?auto=format&fit=crop&q=80&w=800" alt="Oficina mecânica moderna" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-tight text-white mb-4">
+                Estamos na Asa Norte
+            </h2>
+            <div class="h-1 w-20 bg-brand-green mx-auto rounded-full"></div>
+            <p class="text-gray-400 mt-4 text-sm sm:text-base max-w-md mx-auto">Fácil acesso, estacionamento próprio e conforto para você aguardar seu serviço.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-stretch">
+            <div class="lg:col-span-2 bg-brand-card p-6 sm:p-10 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-6">Informações de Contato</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-brand-green mt-1 shrink-0"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">Endereço</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm mt-1">SHN 406 Posto Petrobras, Asa Norte, Brasília-DF</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="text-brand-green mt-1 shrink-0"><i data-lucide="clock" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">Horário de Funcionamento</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm mt-1">Segunda a Sexta: 07h às 18h<br>Sábado: 08h às 13h</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="text-brand-green mt-1 shrink-0"><i data-lucide="phone" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">Telefone / WhatsApp</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm mt-1">(61)996231771</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-800">
+                    <a href="https://wa.me/5561996231771" target="_blank" class="w-full bg-brand-green hover:bg-green-700 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-colors text-sm sm:text-base">
+                        <i data-lucide="navigation" class="w-5 h-5"></i> Traga seu carro hoje
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3 rounded-2xl overflow-hidden border border-gray-800 h-[300px] sm:h-[400px] lg:h-auto relative">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15357.739726207856!2d-47.8864!3d-15.7634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3a2283e3c035%3sAsa%20Norte%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr" 
+                    class="absolute inset-0 w-full h-full grayscale opacity-80 hover:grayscale-0 transition-all duration-300"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#070A10] border-t border-gray-900 py-12 px-4 sm:px-6 text-center text-gray-500 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="font-extrabold text-white tracking-wider">LUBRAX <span class="text-brand-green">ASA NORTE</span></span>
+            </div>
+            <p>© 2026 Lubrax Asa Norte. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5561996231771" target="_blank" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-[#25D366] text-white p-3.5 sm:p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center" aria-label="Fale Conosco">
+        <i data-lucide="message-circle" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+    </a>
+
+    <script>
+        // Inicializa os ícones do Lucide
+        lucide.createIcons();
+
+        // Controle do Menu Mobile (com clique suave)
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons(); // Recarrega o ícone correto
+        }
+    </script>
+</body>
+</html>
